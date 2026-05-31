@@ -58,7 +58,7 @@
       top: 0; left: 0; right: 0;
       z-index: 100;
       background: transparent;
-      padding: 18px 24px 18px 38px;
+      padding: 18px 24px 18px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -212,14 +212,15 @@
     }
 
     .hero-inner {
-      padding: 110px 28px 0 38px;
+      padding: 110px 28px 0 28px;
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       position: relative;
       z-index: 10;
-      max-width: 380px;
+      width: 100%;
+      max-width: 100%;
     }
 
     .hero-kicker {
@@ -243,9 +244,9 @@
 
     .hero-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.6rem, 11vw, 3.8rem);
+      font-size: clamp(2.6rem, 7vw, 4.2rem);
       font-weight: 900;
-      line-height: 1.02;
+      line-height: 1.05;
       color: white;
       margin-bottom: 8px;
     }
@@ -258,7 +259,7 @@
 
     .hero-subtitle {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(1rem, 3.8vw, 1.35rem);
+      font-size: clamp(1rem, 2vw, 1.35rem);
       font-weight: 400;
       font-style: italic;
       color: rgba(255,255,255,0.45);
@@ -332,7 +333,7 @@
       margin-top: auto;
       background: rgba(255,255,255,0.04);
       border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 22px 28px 22px 38px;
+      padding: 22px 28px 22px 28px;
       display: flex;
       gap: 0;
       overflow-x: auto;
@@ -367,7 +368,7 @@
 
     /* ─── SEÇÃO GENÉRICA ─── */
     .section {
-      padding: 72px 28px 72px 38px;
+      padding: 72px 28px 72px 28px;
       border-top: 1px solid var(--gray-ll);
     }
 
@@ -456,14 +457,14 @@
 
     .carousel-slide img {
       width: 100%;
-      aspect-ratio: 4/5;
+      aspect-ratio: 3/4;
       object-fit: cover;
-      object-position: center top;
+      object-position: center center;
     }
 
     .img-placeholder {
       width: 100%;
-      aspect-ratio: 4/5;
+      aspect-ratio: 3/4;
       background: #111;
       display: flex;
       flex-direction: column;
@@ -761,7 +762,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center center;
       display: block;
       border-radius: 2px;
     }
@@ -905,7 +906,7 @@
     /* ─── FOOTER ─── */
     footer {
       background: #050505;
-      padding: 36px 28px 36px 38px;
+      padding: 36px 28px 36px 28px;
       border-top: 1px solid rgba(255,255,255,0.06);
     }
 
@@ -1202,25 +1203,33 @@
 
       /* Nav com padding alinhado ao conteúdo */
       nav {
-        padding-left: calc((100% - 860px) / 2);
-        padding-right: calc((100% - 860px) / 2);
+        padding-left: max(40px, calc(50% - 440px));
+        padding-right: max(40px, calc(50% - 440px));
       }
 
       /* ── HERO ── */
+      #hero {
+        align-items: center;
+      }
+
       .hero-inner {
-        max-width: 500px;
-        padding-top: 130px;
-        padding-left: calc((100% - 860px) / 2);
-        padding-right: 0;
+        padding-top: 160px;
+        padding-left: 40px;
+        padding-right: 40px;
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding-bottom: 60px;
       }
 
       .hero-title {
-        font-size: clamp(3.2rem, 4.2vw, 5.2rem);
+        font-size: clamp(3rem, 4vw, 4.8rem);
       }
 
       .hero-strip {
-        padding-left: calc((100% - 860px) / 2);
-        padding-right: calc((100% - 860px) / 2);
+        padding-left: calc(50% - 440px);
+        padding-right: calc(50% - 440px);
         gap: 0;
       }
       .strip-item {
@@ -1230,16 +1239,16 @@
 
       /* ── SEÇÕES GENÉRICAS ── */
       .section {
-        padding-left: calc((100% - 860px) / 2);
-        padding-right: calc((100% - 860px) / 2);
+        padding-left: max(40px, calc(50% - 440px));
+        padding-right: max(40px, calc(50% - 440px));
         padding-top: 88px;
         padding-bottom: 88px;
       }
 
-      /* ── CARROSSEL FISIO — aspecto 16:9 no desktop ── */
+      /* ── CARROSSEL FISIO — aspecto 4:3 no desktop ── */
       .carousel-slide img,
       .img-placeholder {
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 4 / 3;
       }
 
       /* ── APRESENTAÇÃO ── */
@@ -1276,23 +1285,24 @@
       .gold-rule { left: calc((100% - 1000px) / 2 - 24px); }
 
       nav {
-        padding-left: calc((100% - 1000px) / 2);
-        padding-right: calc((100% - 1000px) / 2);
+        padding-left: max(40px, calc(50% - 500px));
+        padding-right: max(40px, calc(50% - 500px));
       }
 
       .hero-inner {
-        max-width: 560px;
-        padding-left: calc((100% - 1000px) / 2);
+        max-width: 1000px;
+        padding-left: 40px;
+        padding-right: 40px;
       }
 
       .hero-strip {
-        padding-left: calc((100% - 1000px) / 2);
-        padding-right: calc((100% - 1000px) / 2);
+        padding-left: max(40px, calc(50% - 500px));
+        padding-right: max(40px, calc(50% - 500px));
       }
 
       .section {
-        padding-left: calc((100% - 1000px) / 2);
-        padding-right: calc((100% - 1000px) / 2);
+        padding-left: max(40px, calc(50% - 500px));
+        padding-right: max(40px, calc(50% - 500px));
         padding-top: 100px;
         padding-bottom: 100px;
       }
@@ -1338,10 +1348,9 @@
     <div class="hero-inner">
       <div class="hero-kicker">Fisioterapeuta · Recife</div>
       <h1 class="hero-title">
-        Joelho e<br>quadril —
-        <br><span class="hero-title-em">do pré ao<br>pós-operatório.</span>
+        Joelho e quadril — <span class="hero-title-em">do pré ao pós-operatório.</span>
       </h1>
-      <p class="hero-subtitle">Clareza, método e<br>acompanhamento individual.</p>
+      <p class="hero-subtitle">Clareza, método e acompanhamento individual.</p>
       <div class="hero-meta">
         <div class="hero-meta-item">Presencial em Recife · Online no Brasil</div>
         <div class="hero-meta-item">Avaliação individualizada</div>
@@ -1830,7 +1839,7 @@ Além da competência técnica também possui competência emocional.</p>
         const imgEl = document.createElement('img');
         imgEl.src = p.src; imgEl.alt = p.alt;
         // Estilos inline garantem compatibilidade com Safari/iOS
-        imgEl.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:2px;';
+        imgEl.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block;border-radius:2px;';
         // Remove placeholder mantendo o ::before (que define a altura)
         const placeholder = slide.querySelector('.img-placeholder');
         if (placeholder) placeholder.remove();
